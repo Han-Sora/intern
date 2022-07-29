@@ -294,7 +294,7 @@ body {
 
 .explore .expl-title{
   top: 0;
-  padding: 352px 0;
+  padding: 350px 0;
   opacity: 0;
   -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
@@ -308,9 +308,6 @@ body {
 .explore .swiper-slide:hover .expl-title{
   opacity: 1;
   background: linear-gradient(60deg, #64b3f454 0%, #c2e59c47 100%);
-}
-.explore .swiper-slide:hover .content{
-  color: #000;
 }
 
 /* <<================= Booking =================>> */
@@ -421,7 +418,7 @@ body {
   padding: 70px 0 50px 0;
   margin: 0;
 }
-.row-pic {
+#gallery .row-pic {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
@@ -430,14 +427,16 @@ body {
 }
 
 /* Create four equal columns that sits next to each other */
-.item-pic {
+#gallery .item-pic {
   -ms-flex: 25%; /* IE10 */
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
 }
-
-.item-pic img {
+#gallery .row{
+  --bs-gutter-x: 0;
+}
+#gallery .item-pic img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
@@ -451,10 +450,40 @@ body {
     max-width: 50%;
   }
 }
-
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
+}
 
+/* <<================= About =================>> */
+#about .header-content  .numscroller{
+  color: #64b3f4 !important;
+}
+#about .clients {
+  width: 100%;
+  max-width: 6.5rem;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+#about .clients:hover{
+  -webkit-filter: grayscale(0);
+}
+#about #button-addon2{
+  background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+}
+.bg-grad{
+  background: linear-gradient(60deg, #64b3f454 0%, #c2e59c47 100%);;
+}
+/* <<================= Contact =================>> */
+#contact .contact-info .send-mess{
+  border: none;
+  font-weight: bold;
+  color: white;
+  padding: 12px 10px;
+  background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
 }
 
 /* <<================= RESPONSIVE =================>> */
@@ -464,6 +493,9 @@ body {
   #home-page .banner .swiper .enjoy {
     font-size: 22px;
     margin: 0;
+  }
+  #home-page .row.save-banner{
+    position: unset !important;
   }
   #home-page .banner .swiper .text-bttm{
     font-size: 16px;
@@ -485,6 +517,9 @@ body {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
+  }
+  #booking .media-body .room-cash{
+    margin: 0 10px !important;
   }
 }
 
