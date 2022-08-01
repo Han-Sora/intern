@@ -13,7 +13,9 @@ img {
 h3 {
   font-weight: 600;
 }
-
+.dropdown-bg{
+  background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+}
 section,
 footer {
   padding: 70px 0;
@@ -475,6 +477,16 @@ body {
   font-weight: 700;
   background: #c5c5c5;
 }
+/* <<================= RESPONSIVE =================>> */
+#booking-detail .bg-detail{
+  padding: 15px 0;
+  background: linear-gradient(60deg, #64b3f454 0%, #c2e59c47 100%);
+}
+#booking-detail .img-detail{
+  width: 40px;
+  height: 40px;
+}
+
 
 /* <<================= Gallery =================>> */
 #gallery .banner h3 {
