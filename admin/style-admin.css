@@ -1,0 +1,184 @@
+/* <<================= All =================>> */
+* {
+  font-family: "Montserrat";
+  font-size: 16px;
+}
+
+img {
+  border-radius: 5px;
+  border: none;
+  max-width: 100%;
+}
+
+/* <<================= HEADER =================>> */
+
+header .navbar-expand-xl .navbar-nav .nav-link {
+  font-weight: 600;
+  border-bottom: 2px solid #fff0;
+  transition: 0.3s ease-out;
+}
+
+header .navbar-expand-xl .navbar-nav .nav-link:hover {
+  transform: scale(1.1);
+  border-bottom: 2px solid #64b3f4;
+  background: linear-gradient(60deg, #56b3ff 0%, #fef3ff 100%);
+  color: #fff;
+  border-radius: 30px;
+}
+
+header .navbar-expand-xl .navbar-nav li .active {
+  transform: scale(1.1);
+  border-bottom: 2px solid #64b3f4;
+  background: linear-gradient(60deg, #56b3ff 0%, #fef3ff 100%);
+  color: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px 0px rgba(85, 153, 212, 0.5);
+}
+
+header .d-flex button {
+  font-weight: 600;
+}
+
+.sign {
+  background: #56b3ff;
+  border: none;
+  border-radius: 3px;
+}
+
+.mg .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background: linear-gradient(60deg, #56b3ff 0%, #fac1ff 100%);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin: 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: -60px;
+}
+
+.mg .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: -26%;
+  transform: rotate(180deg);
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #aebaff transparent transparent transparent;
+}
+
+.mg:hover .tooltiptext {
+  visibility: visible;
+}
+
+.avatar {
+  height: 90px;
+}
+
+/* <<================= Home-Page =================>> */
+
+/* <<================= Calendar =================>> */
+#calendar-admin .bg-note {
+  background: linear-gradient(60deg, #56b3ff 0%, #fac1ff 100%);
+  padding: 30px 0;
+}
+
+#calendar {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fc .fc-col-header-cell-cushion,
+.fc a[data-navlink],
+.fc-daygrid-dot-event .fc-event-title,
+.fc-direction-ltr .fc-daygrid-event .fc-event-time,
+.fc .fc-daygrid-more-link {
+  text-decoration: none;
+  color: #56b3ff;
+}
+
+.fc-h-event .fc-event-title-container,
+.fc-button:not(:first-child),
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+  border: solid 1px #fff;
+  background: #56b3ff;
+}
+
+.fc-direction-ltr .fc-daygrid-event .fc-event-time,
+.fc-daygrid-block-event .fc-event-title {
+  font-size: 14px;
+}
+
+.fc-daygrid-dot-event .fc-event-title {
+  font-size: 14px;
+}
+
+
+
+input[type=text] {
+  width: 430px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  background-color: white;
+  background-image: url('/img/search.png');
+  background-position: 15px 15px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* <<================= Calendar =================>> */
+.progress {
+  background: #fff;
+  border: solid 1px rgb(222, 222, 222);
+}
+/* <<================= RESPONSIVE =================>> */
+@media screen and (min-width: 992px) {
+  .mg {
+    padding: 0 60px;
+  }
+  .space {
+    margin-left: 327px;
+    padding: 40px 0;
+  }
+
+  .navbar .container-fluid,
+  .navbar-expand-lg .navbar-collapse,
+  .navbar-expand-xl .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 0;
+  }
+
+  .navbar .container-fluid {
+    margin-top: 40px;
+  }
+
+  .offcanvas.offcanvas-start {
+    width: 100% !important;
+    margin-top: 18px;
+  }
+
+  .navbar {
+    width: 327px;
+    height: 100vh;
+    align-items: flex-start;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+}

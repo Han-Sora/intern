@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- JavaScript Bundle with Popper Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="/javascript/main.js"></script>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="style-admin.css" />
+
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl mb-4 fixed-top p-0" id="navbar">
+            <div class="container-fluid wrap">
+                <!-- <a class="navbar-brand p-0" href="home-admin.html">
+                    <img src="/img/img_avatar.png" alt="" class="avatar" />
+                    
+                </a> -->
+                <button type="button" class="btn d-flex justify-content-center w-100 border-0" data-bs-toggle="collapse" data-bs-target="#demo">
+                    <img src="/img/img_avatar.png" class="avatar" alt="">
+                </button>
+                <div id="demo" class="collapse w-100">
+                    <div class="d-flex justify-content-around ">
+                        <a href="#" class="btn border-0"><i class="bi bi-gear fs-5"></i></a>
+                        <a href="#" class="btn border-0"><i class="bi bi-person fs-5"></i></a>
+                        <a href="#" class="btn border-0"><i class="bi bi-arrow-counterclockwise fs-5"></i></a>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbarExample-expand-lg" aria-controls="offcanvasNavbarExample-expand-lg">
+                    <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbarExample-expand-lg"></span>
+                </button>
+                <div class="offcanvas offcanvas-start" data-bs-hideresize="true" tabindex="-1"
+                    id="offcanvasNavbarExample-expand-lg" aria-labelledby="offcanvasNavbarExample-expand-lg">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasLabel">
+                            <img src="/img/bird.png" alt="" />
+                        </h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 order-1">
+                            <li class="nav-item">
+                                <a class="home-admin position-relative nav-link mx-3 my-1" onclick="myFunction()"
+                                    href="home-admin.html"><i class="bi bi-check2-square"></i> Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="calendar position-relative nav-link mx-3 my-1" href="calendar.html"><i
+                                        class="bi bi-calendar-event"></i> Calendar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="room-resort position-relative nav-link mx-3 my-1" href="room-resort.html"><i
+                                        class="bi bi-house-door"></i> Room/Resort</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="gallery position-relative nav-link mx-3 my-1" href="gallery.html"><i
+                                        class="bi bi-images"></i> Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="news position-relative nav-link mx-3 my-1" href="news.html"><i
+                                        class="bi bi-newspaper"></i> News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="managers position-relative nav-link mx-3 my-1" href="managers.html"><i
+                                        class="bi bi-kanban"></i> Managers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="customers position-relative nav-link mx-3 my-1" href="customers.html"><i
+                                        class="bi bi-person"></i> Customers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="coupon position-relative nav-link mx-3 my-1" href="coupon.html"><i
+                                        class="bi bi-card-checklist"></i> Coupon</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="home-page">
+        <section class="main-content space">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- người đặt phòng qua web -->
+                    <div class="col-3 mg position-relative">
+                        <div class="d-flex align-items-center justify-content-center sign">
+                            <i class="bi bi-journal-album text-white" style="font-size: 60px;"></i>
+                            <div class="ps-3 text-white">
+                                <h3 class="fw-bold">4.963</h3>
+                                <h5 class="m-0">Total Booking</h5>
+                            </div>
+                        </div>
+                        <p class="tooltiptext m-0">New Booking: 1064</p>
+                    </div>
+                    <!-- người đặt phòng tại khách sạn -->
+                    <div class="col-3 mg position-relative">
+                        <div class="d-flex align-items-center justify-content-center sign">
+                            <i class="bi bi-people text-white" style="font-size: 60px;"></i>
+                            <div class="ps-3 text-white">
+                                <h3 class="fw-bold">2.412</h3>
+                                <h5 class="m-0">Total Visits</h5>
+                            </div>
+                        </div>
+                        <p class="tooltiptext m-0">New Visits: 1044</p>
+                    </div>
+                    <!-- khách hàng thân thiết -->
+                    <div class="col-3 mg position-relative">
+                        <div class="d-flex align-items-center justify-content-center sign">
+                            <i class="bi bi-bookmarks text-white" style="font-size: 60px;"></i>
+                            <div class="ps-3 text-white">
+                                <h3 class="fw-bold">239</h3>
+                                <h5 class="m-0">Unique Visitor</h5>
+                            </div>
+                            <p class="tooltiptext m-0">New Unique Visitor: 56</p>
+                        </div>
+                    </div>
+                    <!-- số phòng có thể đặt -->
+                    <div class="col-3 mg position-relative">
+                        <div class="d-flex align-items-center justify-content-center sign">
+                            <i class="bi bi-door-open text-white" style="font-size: 60px;"></i>
+                            <div class="ps-3 text-white">
+                                <h3 class="fw-bold">312</h3>
+                                <h5 class="m-0">Room Available</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stat bg-grey space">
+            <div class="container-fluid mg">
+                <h3 class="fw-bold">Income</h3>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <table class="h-100 table table-hover table-borderless m-0">
+                            <thead>
+                                <tr>
+                                    <th>Resourse</th>
+                                    <th class="text-center">%</th>
+                                    <th class="text-end">Cash ($)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Superior Room</td>
+                                    <td class="text-center">30%</td>
+                                    <td class="text-end">200.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Deluxe Room</td>
+                                    <td class="text-center">15%</td>
+                                    <td class="text-end">150.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Suite</td>
+                                    <td class="text-center">5%</td>
+                                    <td class="text-end">50.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Resort</td>
+                                    <td class="text-center">20%</td>
+                                    <td class="text-end">200.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Luxury Resort</td>
+                                    <td class="text-center">10%</td>
+                                    <td class="text-end">100.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Services</td>
+                                    <td class="text-center">10%</td>
+                                    <td class="text-end">100.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Souvenir</td>
+                                    <td class="text-center">10%</td>
+                                    <td class="text-end">100.000</td>
+                                </tr>
+                                <tr>
+                                    <th>Total Income</th>
+                                    <th class="text-center">100%</th>
+                                    <th class="text-end">1.000.000</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row h-100">
+                            <div class="col-12 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="m-0">Superior Room</p>
+                                    <p class="m-0">30%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:30%; background: #ff867b;"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="m-0">Resort</p>
+                                    <p class="m-0">20%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:20%; background: #ff217d;"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="m-0">Deluxe Room</p>
+                                    <p class="m-0">15%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:15%; background: #ffd858;"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="m-0">Services</p>
+                                    <p class="m-0">10%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:10%; background: #ff7e0e;"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="m-0">Souvenir</p>
+                                    <p class="m-0">10%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:10%; background: #6dffd3;"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="m-0">Luxury Resort</p>
+                                    <p class="m-0">10%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:10%; background: #fa9dff;"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="m-0">Suite</p>
+                                    <p class="m-0">5%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:5%; background: #1676fb;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h4 class="text-center">Room Booking Chart (%)</h4>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        const data = {
+            labels: [
+                'Superior',
+                'Deluxe',
+                'Suite',
+                'Resort',
+                'Luxury Resort',
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [37.5, 18.75, 6.25, 25.0, 12.5],
+                backgroundColor: [
+                    '#ff867b',
+                    '#ffd858',
+                    '#1676fb',
+                    '#ff217d',
+                    '#fa9dff'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const config = {
+            type: 'doughnut',
+            data: data,
+        };
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    </script>
+
+</body>
+
+</html>

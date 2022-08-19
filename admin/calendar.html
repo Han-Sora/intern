@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- JavaScript Bundle with Popper Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- calendar    -->
+    <link href='calendar.css' rel='stylesheet' />
+    <script src='/javascript/calendar.js'></script>
+
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="/javascript/main.js"></script>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="style-admin.css" />
+
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl mb-4 fixed-top p-0" id="navbar">
+            <div class="container-fluid wrap">
+                <!-- <a class="navbar-brand p-0" href="home-admin.html">
+                    <img src="/img/img_avatar.png" alt="" class="avatar" />
+                    
+                </a> -->
+                <button type="button" class="btn d-flex justify-content-center w-100 border-0" data-bs-toggle="collapse"
+                    data-bs-target="#demo">
+                    <img src="/img/img_avatar.png" class="avatar" alt="">
+                </button>
+                <div id="demo" class="collapse w-100">
+                    <div class="d-flex justify-content-around ">
+                        <a href="#" class="btn border-0"><i class="bi bi-gear fs-5"></i></a>
+                        <a href="#" class="btn border-0"><i class="bi bi-person fs-5"></i></a>
+                        <a href="#" class="btn border-0"><i class="bi bi-arrow-counterclockwise fs-5"></i></a>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbarExample-expand-lg" aria-controls="offcanvasNavbarExample-expand-lg">
+                    <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbarExample-expand-lg"></span>
+                </button>
+                <div class="offcanvas offcanvas-start" data-bs-hideresize="true" tabindex="-1"
+                    id="offcanvasNavbarExample-expand-lg" aria-labelledby="offcanvasNavbarExample-expand-lg">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasLabel">
+                            <img src="/img/bird.png" alt="" />
+                        </h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 order-1">
+                            <li class="nav-item">
+                                <a class="home-admin position-relative nav-link mx-3 my-1" onclick="myFunction()"
+                                    href="home-admin.html"><i class="bi bi-check2-square"></i> Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="calendar position-relative nav-link mx-3 my-1" href="calendar.html"><i
+                                        class="bi bi-calendar-event"></i> Calendar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="room-resort position-relative nav-link mx-3 my-1" href="room-resort.html"><i
+                                        class="bi bi-house-door"></i> Room/Resort</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="gallery position-relative nav-link mx-3 my-1" href="gallery.html"><i
+                                        class="bi bi-images"></i> Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="news position-relative nav-link mx-3 my-1" href="news.html"><i
+                                        class="bi bi-newspaper"></i> News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="managers position-relative nav-link mx-3 my-1" href="managers.html"><i
+                                        class="bi bi-kanban"></i> Managers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="customers position-relative nav-link mx-3 my-1" href="customers.html"><i
+                                        class="bi bi-person"></i> Customers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="coupon position-relative nav-link mx-3 my-1" href="coupon.html"><i
+                                        class="bi bi-card-checklist"></i> Coupon</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="calendar-admin">
+        <section class="note space">
+            <div class="container-fluid mg">
+                <div class="row">
+                    <div class="col-lg-4" style="height: 100%; overflow: auto;">
+                        <div class="text-center mb-3 text-white rounded-2 bg-note">
+                            <h3>1-8</h3>
+                            <h3>Monday</h3>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="card-title m-0 py-3">Event 1</h4>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn border-0"><i class="bi bi-pencil-square"
+                                                style="color: #56b3ff;"></i></a>
+                                        <a href="#" class="btn border-0"><i class="bi bi-trash3"
+                                                style="color: red;"></i></a>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui sapiente commodi.
+                                    </p>
+                                    <p class="card-text d-flex"><i class="bi bi-clock me-2"></i>13:00pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="card-title m-0 py-3">Event 2</h4>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn border-0"><i class="bi bi-pencil-square"
+                                                style="color: #56b3ff;"></i></a>
+                                        <a href="#" class="btn border-0"><i class="bi bi-trash3"
+                                                style="color: red;"></i></a>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui sapiente commodi.
+                                    </p>
+                                    <p class="card-text d-flex"><i class="bi bi-clock me-2"></i>13:00pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="card-title m-0 py-3">Event 3</h4>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn border-0"><i class="bi bi-pencil-square"
+                                                style="color: #56b3ff;"></i></a>
+                                        <a href="#" class="btn border-0"><i class="bi bi-trash3"
+                                                style="color: red;"></i></a>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui sapiente commodi.
+                                    </p>
+                                    <p class="card-text d-flex"><i class="bi bi-clock me-2"></i>13:00pm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div id='calendar'></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+      
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            headerToolbar: {
+              left: 'prev,next today',
+              center: 'title',
+              right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+            },
+            initialDate: '2020-09-12',
+            navLinks: true, // can click day/week names to navigate views
+            nowIndicator: true,
+      
+            weekNumbers: true,
+            weekNumberCalculation: 'ISO',
+      
+            editable: true,
+            selectable: true,
+            dayMaxEvents: true, // allow "more" link when too many events
+            events: [
+              {
+                title: 'All Day Event',
+                start: '2020-09-01'
+              },
+              {
+                title: 'Long Event',
+                start: '2020-09-07',
+                end: '2020-09-10'
+              },
+              {
+                groupId: 999,
+                title: 'Repeating Event',
+                start: '2020-09-09T16:00:00'
+              },
+              {
+                groupId: 999,
+                title: 'Repeating Event',
+                start: '2020-09-16T16:00:00'
+              },
+              {
+                title: 'Conference',
+                start: '2020-09-11',
+                end: '2020-09-13'
+              },
+              {
+                title: 'Meeting',
+                start: '2020-09-12T10:30:00',
+                end: '2020-09-12T12:30:00'
+              },
+              {
+                title: 'Lunch',
+                start: '2020-09-12T12:00:00'
+              },
+              {
+                title: 'Meeting',
+                start: '2020-09-12T14:30:00'
+              },
+              {
+                title: 'Happy Hour',
+                start: '2020-09-12T17:30:00'
+              },
+              {
+                title: 'Dinner',
+                start: '2020-09-12T20:00:00'
+              },
+              {
+                title: 'Birthday Party',
+                start: '2020-09-13T07:00:00'
+              },
+              {
+                title: 'Click for Google',
+                url: 'http://google.com/',
+                start: '2020-09-28'
+              }
+            ]
+          });
+      
+          calendar.render();
+        });
+      
+      </script>
+</body>
+
+</html>
